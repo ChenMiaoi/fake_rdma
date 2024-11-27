@@ -2,6 +2,8 @@
 #ifndef __MNL_UTILS_H__
 #define __MNL_UTILS_H__ 1
 
+#include "libmnl/libmnl.h"
+
 struct mnlu_gen_socket {
 	struct mnl_socket *nl;
 	char *buf;

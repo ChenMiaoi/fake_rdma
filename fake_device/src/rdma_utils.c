@@ -1,4 +1,3 @@
-#include "mnl/utils.h"
 #include "rdma.h"
 
 #include <libmnl/libmnl.h>

@@ -6,7 +6,7 @@ set(CMAKE_C_STANDARD_REQUIRED ON)
 
 include_directories(include)
 include_directories(include/kernel)
-include_directories(include/libs)
+include_directories(include/uapi)
 
 file(GLOB_RECURSE LIB_SOURCES libs/*.c)
 

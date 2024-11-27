@@ -14,8 +14,8 @@
 #include <string.h>
 #include <time.h>
 
-#include "mnl/utils.h"
-#include "uapi/linux/netlink.h"
+#include "mnl_utils.h"
+#include "linux/netlink.h"
 
 #include "rdma/rdma_netlink.h"
 #include "rdma/rdma_user_cm.h"

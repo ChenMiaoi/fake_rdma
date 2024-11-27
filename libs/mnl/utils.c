@@ -1,4 +1,8 @@
-#include "mnl/utils.h"
+#include "utils.h"
+#include "mnl_utils.h"
+#include "libnetlink.h"
+
+#include <errno.h>
 
 static int mnlu_cb_noop( const struct nlmsghdr* nlh, void* data ) {
 	return MNL_CB_OK;
@@ -46,7 +50,7 @@ struct mnl_socket* mnlu_socket_open( int bus ) {
 	struct mnl_socket* nl;
 	int                one = 1;
 
-	nl = mnlu_socket_open( bus );
+	nl = mnl_socket_open( bus );
 	if ( nl == NULL ) return NULL;
 
 	mnl_socket_setsockopt( nl, NETLINK_CAP_ACK, &one, sizeof( one ) );
