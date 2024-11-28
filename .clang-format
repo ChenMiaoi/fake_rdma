@@ -62,7 +62,8 @@ SpacesInContainerLiterals: false
 SpacesInParentheses: true
 SpacesInSquareBrackets: true
 TabWidth: 2
-UseTab: ForContinuationAndIndentation
+# UseTab: ForContinuationAndIndentation
+UseTab: Never
 
 AlignTrailingComments: true
 AlignConsecutiveMacros: true

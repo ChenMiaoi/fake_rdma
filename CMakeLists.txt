@@ -4,9 +4,13 @@ project(fake-rdma VERSION 0.1.0 LANGUAGES C)
 set(CMAKE_C_STANDARD 11)
 set(CMAKE_C_STANDARD_REQUIRED ON)
 
-include_directories(include)
-include_directories(include/kernel)
-include_directories(include/uapi)
+include_directories(
+  include
+  include/kernel
+  include/kernel/uapi
+
+  /usr/include
+)
 
 file(GLOB_RECURSE LIB_SOURCES libs/*.c)
 
