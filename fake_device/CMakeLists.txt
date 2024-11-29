@@ -3,7 +3,7 @@ project(fake-device VERSION 0.1.0 LANGUAGES C)
 
 set(CMAKE_C_FLAGS 
   "-Wall -Wstrict-prototypes  -Wmissing-prototypes -Wmissing-declarations -Wold-style-definition -Wformat=2 -O2 -pipe -g")
-set(LD_FLAGS mnl)
+# set(LD_FLAGS mnl)
 
 add_compile_definitions(GNU_SOURCE)
 add_compile_definitions(FILE_OFFSET_BITS=64)
@@ -20,5 +20,4 @@ add_executable(fake-rdma
 
 target_link_libraries(fake-rdma 
   fake-libs
-  ${LD_FLAGS}
 )

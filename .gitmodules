@@ -1,0 +1,3 @@
+[submodule "deps/libmnl"]
+	path = deps/libmnl
+	url = https://git.netfilter.org/libmnl

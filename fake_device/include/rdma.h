@@ -62,8 +62,14 @@ typedef struct rdma_device {
 void rd_free( struct rdma_device* rd );
 
 int  rd_send_msg( struct rdma_device* rd );
-int  rd_recv_msg( struct rdma_device* rd, mnl_cb_t callback, void* data, uint32_t seq );
-void rd_prepare_msg( struct rdma_device* rd, uint32_t cmd, uint32_t* seq, uint16_t flags );
+int  rd_recv_msg( struct rdma_device* rd,
+                  mnl_cb_t            callback,
+                  void*               data,
+                  uint32_t            seq );
+void rd_prepare_msg( struct rdma_device* rd,
+                     uint32_t            cmd,
+                     uint32_t*           seq,
+                     uint16_t            flags );
 int  rd_dev_init_cb( const struct nlmsghdr* nlh, void* data );
 int  rd_attr_cb( const struct nlattr* attr, void* data );
 

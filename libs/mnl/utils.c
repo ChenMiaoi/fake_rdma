@@ -3,6 +3,8 @@
 #include "mnl_utils.h"
 
 #include <errno.h>
+#include <linux/netlink.h>
+#include <stdio.h>
 
 static int mnlu_cb_noop( const struct nlmsghdr* nlh, void* data ) {
   return MNL_CB_OK;
